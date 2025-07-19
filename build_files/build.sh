@@ -19,7 +19,7 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 install -y gnome-tweaks niri xwayland-satellite os-prober libratbag-ratbagd zsh eza bat mako waybar wine vulkan-headers vulkan-loader vulkan-tools 
+dnf5 install -y gnome-tweaks niri xwayland-satellite zsh bat mako waybar wine
 
 # VSCode
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
