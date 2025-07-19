@@ -19,8 +19,9 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-rpm-ostree install akmod-nvidia xorg-x11-drv-nvidia-cuda
-rpm-ostree kargs --append=rd.driver.blacklist=nouveau,nova_core --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1
+dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf5 install -y akmod-nvidia
+dnf5 install -y xorg-x11-drv-nvidia-cuda
 
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks xinput
 dnf5 remove -y alacritty
