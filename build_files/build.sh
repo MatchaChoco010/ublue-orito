@@ -20,7 +20,7 @@ set -ouex pipefail
 # dnf5 -y copr disable ublue-os/staging
 
 dnf5 install -y kernel-devel kernel-headers
-dnf5 install -y akmod-nvidia nvidia-driver-cuda
+dnf5 install -y akmod-nvidia nvidia-driver-cuda xorg-x11-drv-nvidia-cuda
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks xinput
 dnf5 remove -y alacritty
 
