@@ -19,10 +19,14 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 remove -y vlc vlc-plugins-base vlc-plugins-freeworld
+# dnf5 remove -y vlc vlc-plugins-base vlc-plugins-freeworld
+# dnf5 install -y \
+#   https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+#   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 dnf5 install -y \
-  https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 
 dnf5 install -y akmod-nvidia
 dnf5 install -y xorg-x11-drv-nvidia-cuda
