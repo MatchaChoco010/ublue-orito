@@ -22,10 +22,10 @@ set -ouex pipefail
 dnf5 install -y gnome-tweaks niri xwayland-satellite zsh bat btop mako waybar wine winetricks
 
 # VSCode
-# rpm --import https://packages.microsoft.com/keys/microsoft.asc
-# echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
-# dnf5 check-update
-# dnf5 install code # or code-insiders
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+dnf5 check-update
+dnf5 install code # or code-insiders
 
 # 1Password
 # rpm --import https://downloads.1password.com/linux/keys/1password.asc
