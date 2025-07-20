@@ -21,8 +21,8 @@ set -ouex pipefail
 
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper firefox podman
 
-dnf5 copr -y enable wezfurlong/wezterm-nightly
-dnf5 install -y wezterm
+dnf5 copr -y enable scottames/ghostty
+dnf5 install -y ghostty
 
 dnf5 install -y xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring
 
