@@ -22,7 +22,19 @@ set -ouex pipefail
 dnf5 install -y \
   akmod-nvidia \
   nvidia-driver \
-  nvidia-driver-libs
+  nvidia-driver-libs \
+  nvidia-utils
+
+# nouveauを無効化
+echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nouveau.conf
+echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist-nouveau.conf
+
+# dracut設定でnouveauを除外
+echo 'omit_drivers+=" nouveau "' >> /etc/dracut.conf.d/nvidia.conf
+
+# grubの設定でnouveauを無効化
+grubby --update-kernel=ALL --args="modprobe.blacklist=nouveau rd.driver.blacklist=nouveau nvidia.modeset=1"
+
 
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper
 dnf5 remove -y alacritty
