@@ -23,8 +23,6 @@ dnf5 install -y \
   akmod-nvidia \
   nvidia-driver \
   nvidia-driver-libs
-dnf5 install -y \
-  xorg-x11-drv-nvidia-cuda
 
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper
 dnf5 remove -y alacritty
