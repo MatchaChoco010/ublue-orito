@@ -25,7 +25,7 @@ dnf5 install -y \
 dnf5 install -y akmod-nvidia
 dnf5 install -y xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
 
-dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks xinput
+dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper
 dnf5 remove -y alacritty
 
 # VSCode
@@ -39,3 +39,4 @@ dnf5 install -y https://download01.xp-pen.com/file/2025/02/XPPenLinux4.0.7-25011
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl enable input-remapper
