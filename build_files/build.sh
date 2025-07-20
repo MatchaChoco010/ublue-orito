@@ -22,8 +22,13 @@ set -ouex pipefail
 dnf5 install -y \
   https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-dnf5 install -y akmod-nvidia
-dnf5 install -y nvidia-driver nvidia-driver-libs nvidia-driver-cuda-libs nvidia-modprobe nvidia-driver-libs.i686 xorg-x11-drv-nvidia-cuda
+dnf5 install -y  --repo=rpmfusion-nonfree-updates \
+  akmod-nvidia \
+  nvidia-driver \
+  nvidia-driver-libs
+dnf5 install -y --repo=rpmfusion-nonfree-updates \
+  xorg-x11-drv-nvidia-cuda \
+  nvidia-driver-cuda-libs
 
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper
 dnf5 remove -y alacritty
