@@ -21,6 +21,11 @@ set -ouex pipefail
 
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper firefox podman
 
+dnf5 copr -y enable wezfurlong/wezterm-nightly
+dnf5 install -y wezterm
+
+dnf5 install -y xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring
+
 # VSCode
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo > /dev/null
