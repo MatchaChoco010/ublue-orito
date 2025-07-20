@@ -19,24 +19,7 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 install -y \
-  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-dnf5 install -y --allowerasing \
-  akmod-nvidia \
-  nvidia-driver \
-  nvidia-driver-libs \
-  xorg-x11-drv-nvidia-cuda
-
-# nouveauを無効化
-echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nouveau.conf
-echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist-nouveau.conf
-echo 'omit_drivers+=" nouveau "' >> /etc/dracut.conf.d/nvidia.conf
-grubby --update-kernel=ALL --args="modprobe.blacklist=nouveau rd.driver.blacklist=nouveau nvidia.modeset=1"
-
-
 dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper
-dnf5 remove -y alacritty
 
 # VSCode
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
