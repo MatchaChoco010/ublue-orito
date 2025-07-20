@@ -20,9 +20,6 @@ set -ouex pipefail
 # dnf5 -y copr disable ublue-os/staging
 
 dnf5 install -y \
-  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-dnf5 install -y \
   akmod-nvidia \
   nvidia-driver \
   nvidia-driver-libs
