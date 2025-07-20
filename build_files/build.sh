@@ -19,7 +19,7 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop mako blueman waybar wine winetricks input-remapper firefox podman
+dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop fzf ripgrep mako blueman waybar wine winetricks input-remapper firefox podman
 
 dnf5 copr -y enable scottames/ghostty
 dnf5 install -y ghostty
