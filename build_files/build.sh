@@ -24,6 +24,9 @@ dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop 
 dnf5 copr -y enable scottames/ghostty
 dnf5 install -y ghostty
 
+dnf5 copr -y enable atim/starship
+dnf5 install -y starship
+
 dnf5 install -y xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring
 
 # VSCode
