@@ -20,19 +20,18 @@ set -ouex pipefail
 # dnf5 -y copr disable ublue-os/staging
 
 dnf5 install -y \
+  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+dnf5 install -y --allowerasing \
   akmod-nvidia \
   nvidia-driver \
   nvidia-driver-libs \
-  nvidia-utils
+  xorg-x11-drv-nvidia-cuda
 
 # nouveauを無効化
 echo "blacklist nouveau" >> /etc/modprobe.d/blacklist-nouveau.conf
 echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist-nouveau.conf
-
-# dracut設定でnouveauを除外
 echo 'omit_drivers+=" nouveau "' >> /etc/dracut.conf.d/nvidia.conf
-
-# grubの設定でnouveauを無効化
 grubby --update-kernel=ALL --args="modprobe.blacklist=nouveau rd.driver.blacklist=nouveau nvidia.modeset=1"
 
 
