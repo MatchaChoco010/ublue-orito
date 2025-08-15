@@ -28,10 +28,13 @@ dnf5 copr -y enable atim/starship
 dnf5 install -y starship
 
 
+dnf5 copr -y enable solopasha/hyprland
+dnf5 install -y hyprland xdg-desktop-portal-hyprland hyprpicker hypridle wl-clipboard cliphist
+
 dnf5 copr -y enable rockowitz/ddcutil
 dnf5 install -y ddcutil
 
-dnf5 install -y brightnessctl lm_sensors grim slurp swappy libqalculate hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprpicker hypridle wl-clipboard cliphist bluez-utils inotify-tools wireplumber trash-cli foot jq socat curl adw-gtk-theme papirus-icon-theme qt5ct qt6ct
+dnf5 install -y brightnessctl grim slurp swappy  bluez bluez-tools inotify-tools trash-cli foot adw-gtk3-theme papirus-icon-theme qt5ct qt6ct
 
 dnf5 copr enable errornointernet/quickshell
 dnf5 install quickshell-git
