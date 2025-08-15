@@ -36,8 +36,8 @@ dnf5 install -y ddcutil
 
 dnf5 install -y brightnessctl grim slurp swappy  bluez bluez-tools inotify-tools trash-cli foot adw-gtk3-theme papirus-icon-theme qt5ct qt6ct
 
-dnf5 copr enable errornointernet/quickshell
-dnf5 install quickshell-git
+dnf5 copr -y enable errornointernet/quickshell
+dnf5 install -y quickshell-git
 
 
 # VSCode
