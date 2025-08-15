@@ -19,7 +19,7 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 install -y gnome-tweaks niri xwayland-satellite swaybg fuzzel zsh bat btop fzf ripgrep mako blueman waybar wine winetricks input-remapper firefox podman
+dnf5 install -y gnome-tweaks swaybg fuzzel zsh bat btop fzf ripgrep mako blueman waybar wine winetricks input-remapper firefox podman
 
 dnf5 copr -y enable scottames/ghostty
 dnf5 install -y ghostty
@@ -27,7 +27,15 @@ dnf5 install -y ghostty
 dnf5 copr -y enable atim/starship
 dnf5 install -y starship
 
-dnf5 install -y xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring
+
+dnf5 copr -y enable rockowitz/ddcutil
+dnf5 install -y ddcutil
+
+dnf5 install -y brightnessctl lm_sensors grim slurp swappy libqalculate hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gtk hyprpicker hypridle wl-clipboard cliphist bluez-utils inotify-tools wireplumber trash-cli foot jq socat curl adw-gtk-theme papirus-icon-theme qt5ct qt6ct
+
+dnf5 copr enable errornointernet/quickshell
+dnf5 install quickshell-git
+
 
 # VSCode
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
