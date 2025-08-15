@@ -29,7 +29,7 @@ dnf5 install -y starship
 
 
 dnf5 copr -y enable solopasha/hyprland
-dnf5 install -y hyprland xdg-desktop-portal-hyprland hyprpicker hypridle wl-clipboard cliphist
+dnf5 install -y hyprland xdg-desktop-portal-hyprland hyprpicker hypridle hyprlock hyprpaper wl-clipboard cliphist
 
 dnf5 copr -y enable rockowitz/ddcutil
 dnf5 install -y ddcutil
