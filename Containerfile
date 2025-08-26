@@ -28,9 +28,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     ostree container commit
 
 ### COPY FILES
-COPY files/etc/ /usr/etc/
+COPY files/etc/ /etc/
 COPY files/usr/share/backgrounds/ /usr/share/backgrounds/
-RUN cp -af /usr/etc/ /etc/ && rm -rf /usr/etc
 
 ### LINTING
 ## Verify final image and contents are correct.
