@@ -20,7 +20,7 @@ set -ouex pipefail
 # dnf5 -y copr disable ublue-os/staging
 
 dnf5 install -y niri xwayland-satellite swaybg waybar
-dnf5 install -y zsh bat btop fzf ripgrep trash-cli
+dnf5 install -y zsh bat btop fzf ripgrep trash-cli nvim
 dnf5 install -y wine winetricks podman
 dnf5 install -y blueman bluez bluez-tools
 dnf5 install -y grim slurp swappy
@@ -43,15 +43,9 @@ dnf5 copr -y enable errornointernet/quickshell
 dnf5 install -y quickshell-git
 
 
-# VSCode
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
-echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | tee /etc/yum.repos.d/vscode.repo > /dev/null
-dnf5 install -y code # or code-insiders
-
 # XPPen
 dnf5 install -y https://download01.xp-pen.com/file/2025/02/XPPenLinux4.0.7-250117.rpm
 
-#### Example for enabling a System Unit File
 
 systemctl enable podman.socket
 systemctl enable input-remapper
