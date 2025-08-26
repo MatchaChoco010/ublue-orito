@@ -1,0 +1,15 @@
+[default_session]
+command = "gtkgreet -l --css /etc/greetd/gtkgreet.css"
+user = "greeter"
+
+[[sessions]]
+name = "Niri"
+command = "dbus-run-session niri"
+
+[[sessions]]
+name = "Plasma (Wayland)"
+command = "dbus-run-session startplasma-wayland"
+
+[[sessions]]
+name = "Plasma (X11)"
+command = "dbus-run-session startplasma-x11"
