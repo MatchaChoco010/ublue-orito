@@ -19,7 +19,16 @@ set -ouex pipefail
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 install -y gnome-tweaks swaybg fuzzel zsh bat btop fzf ripgrep mako blueman waybar wine winetricks input-remapper firefox podman
+dnf5 install -y niri xwayland-satellite swaybg waybar
+dnf5 install -y zsh bat btop fzf ripgrep trash-cli
+dnf5 install -y wine winetricks podman
+dnf5 install -y blueman bluez bluez-tools
+dnf5 install -y grim slurp swappy
+dnf5 install -y inotify-tools mako
+dnf5 install -y gnome-tweaks fuzzel input-remapper firefox foot
+dnf5 install -y adw-gtk3-theme papirus-icon-theme
+dnf5 install -y qt5ct qt6ct
+dnf5 install -y greetd gtkgreet uwsm
 
 dnf5 copr -y enable scottames/ghostty
 dnf5 install -y ghostty
@@ -27,14 +36,8 @@ dnf5 install -y ghostty
 dnf5 copr -y enable atim/starship
 dnf5 install -y starship
 
-
-dnf5 copr -y enable solopasha/hyprland
-dnf5 install -y hyprland xdg-desktop-portal-hyprland hyprpicker hypridle hyprlock hyprpaper wl-clipboard cliphist
-
 dnf5 copr -y enable rockowitz/ddcutil
 dnf5 install -y ddcutil
-
-dnf5 install -y brightnessctl grim slurp swappy  bluez bluez-tools inotify-tools trash-cli foot adw-gtk3-theme papirus-icon-theme qt5ct qt6ct
 
 dnf5 copr -y enable errornointernet/quickshell
 dnf5 install -y quickshell-git
