@@ -1,15 +1,6 @@
+[terminal]
+vt = 1
+
 [default_session]
-command = "gtkgreet -l --css /etc/greetd/gtkgreet.css"
+command = "/usr/bin/cage -s -m last -- /usr/bin/gtkgreet -l"
 user = "greeter"
-
-[[sessions]]
-name = "Niri"
-command = "dbus-run-session niri"
-
-[[sessions]]
-name = "Plasma (Wayland)"
-command = "dbus-run-session startplasma-wayland"
-
-[[sessions]]
-name = "Plasma (X11)"
-command = "dbus-run-session startplasma-x11"

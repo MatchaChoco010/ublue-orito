@@ -20,7 +20,7 @@ set -ouex pipefail
 # dnf5 -y copr disable ublue-os/staging
 
 dnf5 install -y niri xwayland-satellite swaybg waybar
-dnf5 install -y zsh bat btop fzf ripgrep trash-cli nvim
+dnf5 install -y zsh bat btop fzf ripgrep trash-cli
 dnf5 install -y wine winetricks podman
 dnf5 install -y blueman bluez bluez-tools
 dnf5 install -y grim slurp swappy
