@@ -28,9 +28,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     ostree container commit
 
 ### COPY FILES
-COPY files/var/ /var/
 COPY files/etc/ /etc/
-COPY files/usr/share/backgrounds/ /usr/share/backgrounds/
+COPY files/usr/ /usr/
 
 ### LINTING
 ## Verify final image and contents are correct.
