@@ -28,7 +28,7 @@ dnf5 install -y inotify-tools mako
 dnf5 install -y gnome-tweaks fuzzel input-remapper firefox foot
 dnf5 install -y adw-gtk3-theme papirus-icon-theme
 dnf5 install -y qt5ct qt6ct
-dnf5 install -y greetd gtkgreet
+dnf5 install -y greetd gtkgreet seatd
 
 dnf5 copr -y enable scottames/ghostty
 dnf5 install -y ghostty
@@ -49,3 +49,4 @@ dnf5 install -y https://download01.xp-pen.com/file/2025/02/XPPenLinux4.0.7-25011
 
 systemctl enable podman.socket
 systemctl enable input-remapper
+systemctl enable seatd.service
