@@ -1,6 +1,0 @@
-/* 背景画像を指定 */
-window {
-  background-image: url("file:///usr/share/backgrounds/login-background.png");
-  background-size: cover;
-  background-position: center;
-}
