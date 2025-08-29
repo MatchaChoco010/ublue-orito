@@ -43,8 +43,6 @@ dnf5 install -y ddcutil
 dnf5 copr -y enable errornointernet/quickshell
 dnf5 install -y quickshell-git
 
-rpm-ostree override remove obs-studio
-rpm-ostree override remove blender
 
 # XPPen
 dnf5 install -y https://download01.xp-pen.com/file/2025/02/XPPenLinux4.0.7-250117.rpm
