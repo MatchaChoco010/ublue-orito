@@ -30,6 +30,7 @@ dnf5 install -y adw-gtk3-theme papirus-icon-theme
 dnf5 install -y qt5ct qt6ct
 dnf5 install -y xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring
 dnf5 install -y nautilus
+dnf5 install -y podman-compose
 
 dnf5 copr -y enable scottames/ghostty
 dnf5 install -y ghostty
