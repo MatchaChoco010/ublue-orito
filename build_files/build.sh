@@ -23,7 +23,6 @@ dnf5 install -y niri xwayland-satellite swaybg waybar
 dnf5 install -y zsh bat btop fzf ripgrep trash-cli
 dnf5 install -y wine winetricks podman
 dnf5 install -y blueman bluez bluez-tools
-dnf5 install -y grim slurp swappy
 dnf5 install -y inotify-tools mako
 dnf5 install -y gnome-tweaks fuzzel input-remapper firefox foot
 dnf5 install -y adw-gtk3-theme papirus-icon-theme
@@ -31,6 +30,7 @@ dnf5 install -y qt5ct qt6ct
 dnf5 install -y xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring
 dnf5 install -y nautilus
 dnf5 install -y podman-compose
+dnf5 install -y egl-wayland
 
 dnf5 copr -y enable scottames/ghostty
 dnf5 install -y ghostty
