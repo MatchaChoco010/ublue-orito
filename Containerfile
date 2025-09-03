@@ -14,7 +14,8 @@ COPY build_files /
 # Fedora base image: quay.io/fedora/fedora-bootc:41
 # CentOS base images: quay.io/centos-bootc/centos-bootc:stream10
 
-FROM ghcr.io/ublue-os/bazzite-nvidia:stable
+# FROM ghcr.io/ublue-os/bazzite-nvidia:stable
+FROM ghcr.io/ublue-os/bazzite-nvidia:stable-42.20250828.1
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
