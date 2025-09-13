@@ -46,7 +46,7 @@ dnf5 install -y quickshell-git
 # XPPen
 dnf5 install -y https://download01.xp-pen.com/file/2025/02/XPPenLinux4.0.7-250117.rpm
 
-rpm-ostree override remove waylandvideobridge
+rpm-ostree override remove xwaylandvideobridge
 
 systemctl enable podman.socket
 systemctl enable input-remapper
