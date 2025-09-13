@@ -24,7 +24,7 @@ dnf5 install -y zsh bat btop fzf ripgrep trash-cli
 dnf5 install -y wine winetricks podman
 dnf5 install -y blueman bluez bluez-tools
 dnf5 install -y inotify-tools mako
-dnf5 install -y gnome-tweaks fuzzel input-remapper firefox foot kitty
+dnf5 install -y gnome-tweaks fuzzel input-remapper firefox foot
 dnf5 install -y adw-gtk3-theme papirus-icon-theme
 dnf5 install -y qt5ct qt6ct
 dnf5 install -y xdg-desktop-portal-gtk xdg-desktop-portal-gnome gnome-keyring
