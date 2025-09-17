@@ -44,7 +44,7 @@ dnf5 copr -y enable errornointernet/quickshell
 dnf5 install -y quickshell-git
 
 # CUDA Toolkit
-wget https://developer.download.nvidia.com/compute/cuda/13.0.1/local_installers/cuda-repo-fedora42-13-0-local-13.0.1_580.82.07-1.x86_64.rp
+wget https://developer.download.nvidia.com/compute/cuda/13.0.1/local_installers/cuda-repo-fedora42-13-0-local-13.0.1_580.82.07-1.x86_64.rpm
 rpm -i cuda-repo-fedora42-13-0-local-13.0.1_580.82.07-1.x86_64.rpm
 dnf5 clean all
 dnf5 -y install cuda-toolkit-13-0
