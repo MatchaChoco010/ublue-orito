@@ -43,6 +43,9 @@ dnf5 install -y ddcutil
 dnf5 copr -y enable errornointernet/quickshell
 dnf5 install -y quickshell-git
 
+# CUDA Toolkit
+rpm-ostree install cuda-toolkit hip-runtime-nvidia hip-dev
+
 # XPPen
 dnf5 install -y https://download01.xp-pen.com/file/2025/02/XPPenLinux4.0.7-250117.rpm
 
