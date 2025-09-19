@@ -46,7 +46,6 @@ dnf5 install -y quickshell-git
 # CUDA Toolkit and HIP
 dnf5 config-manager addrepo \
   --from-repofile=https://developer.download.nvidia.com/compute/cuda/repos/fedora$(rpm -E %fedora)/x86_64/cuda-fedora$(rpm -E %fedora).repo
-dnf5 copr -y enable radeon/rocm
 dnf5 clean all
 rpm-ostree install cuda-toolkit hip-runtime-nvidia hip-dev
 
