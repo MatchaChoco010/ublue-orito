@@ -43,6 +43,11 @@ dnf5 install -y ddcutil
 dnf5 copr -y enable errornointernet/quickshell
 dnf5 install -y quickshell-git
 
+# CUDA Toolkit
+dnf5 config-manager addrepo --from-repofile https://developer.download.nvidia.com/compute/cuda/repos/fedora${rpm -E %fedora}/x86_64/cuda-fedora${rpm -E %fedora}.repo
+dnf5 clean all
+dnf5 -y install cuda-toolkit
+
 # XPPen
 dnf5 install -y https://download01.xp-pen.com/file/2025/02/XPPenLinux4.0.7-250117.rpm
 
